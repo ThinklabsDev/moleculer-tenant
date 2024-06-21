@@ -1,0 +1,22 @@
+diff --git a/node_modules/@moleculer/database/src/adapters/mongodb.js b/node_modules/@moleculer/database/src/adapters/mongodb.js
+index c938cf3..de3e508 100644
+--- a/node_modules/@moleculer/database/src/adapters/mongodb.js
++++ b/node_modules/@moleculer/database/src/adapters/mongodb.js
+@@ -241,7 +241,7 @@ class MongoDBAdapter extends BaseAdapter {
+ 			entity._id = this.stringToObjectID(entity._id);
+ 		}
+ 		const res = await this.collection.insertOne(entity);
+-		if (!res.acknowledged) throw new Error("MongoDB insertOne failed.");
++		if (!res.insertedId) throw new Error("MongoDB insertOne failed.");
+ 		return entity;
+ 	}
+ 
+@@ -261,7 +261,7 @@ class MongoDBAdapter extends BaseAdapter {
+ 			}
+ 		}
+ 		const res = await this.collection.insertMany(entities);
+-		if (!res.acknowledged) throw new Error("MongoDB insertMany failed.");
++		if (!res.insertedIds) throw new Error("MongoDB insertMany failed.");
+ 		return opts.returnEntities ? entities : Object.values(res.insertedIds);
+ 	}
+ 

@@ -1,0 +1,4 @@
+{"name":"Phòng khám bác sĩ Thành","code":"OLM","mongoUri":"mongodb://pkbacsithanh:thinklAb202x@113.160.181.249:4014/pkbacsithanh?authSource=pkbacsithanh","_id":"Rrl9ojt2uWdlJoFD"}
+{"name":"Phòng khám tClinic","code":"CLN","mongoUri":"mongodb://tclinic_db_test:thinklAb202x@103.124.95.232:17017/tclinic_db_test?authSource=tclinic_db_test","_id":"nhTUpTfPbrs8ROw3"}
+{"_id":"ayVzUbyyjkp5Zoju"}
+{"$$deleted":true,"_id":"ayVzUbyyjkp5Zoju"}
